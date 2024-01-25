@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embeddable Audio Player</title>
+    <style>
+        /* Customize player styles */
+        #audio-player {
+            border: 2px solid #3498db; /* Set the outline color */
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 400px; /* Adjust as needed */
+            margin: auto;
+        }
+
+        #audio-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="audio-player">
+        <h2 id="audio-title">Audio Title</h2>
+        <img id="audio-image" src="https://drive.google.com/file/d/1uBqRlpcJ571szZAvQyLFSof3csUiAPZs/view?usp=drive_link" alt="Audio Image">
+        <audio controls>
+            <source id="audio-source" src="" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Replace these values with your Google Drive shareable link, title, and image URL
+        const audioFileLink = 'https://drive.google.com/uc?id=1HBFMf4SgbntdwvjMCVMAcC5ug_DAAPgf';
+        const audioTitle = 'God Of Fool';
+        const audioImageURL = 'https://drive.google.com/file/d/1uBqRlpcJ571szZAvQyLFSof3csUiAPZs/view?usp=drive_link';
+
+        // Update HTML elements with dynamic content
+        document.getElementById('audio-title').innerText = audioTitle;
+        document.getElementById('audio-source').src = audioFileLink;
+        document.getElementById('audio-image').src = audioImageURL;
+    </script>
+</body>
+</html>
